@@ -1,0 +1,96 @@
+:root {
+  max-width: 100%;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+  --purple: #321063;
+  --light-purple: #7756B7;
+
+}
+
+.light-purple {
+  color: var(--light-purple);
+}
+
+body {
+  margin: 0; 
+  padding: 1rem;
+  background-image: url('/background-image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden; 
+  width: 100vw;
+  height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/background-cover.svg'); 
+  opacity: 0.7; 
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.speedometer-container {
+  position: relative;
+  /* background-color: var(--light-purple); */
+  /* height: 80vh; */
+  /* width: 90%; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  border: 4px solid white;
+  border-radius: 25rem;
+  padding: 1rem;
+  /* gap: 8rem; */
+}
+
+.sphere-one,
+.sphere-two {
+  position: relative;
+  background-color: yellow;
+  border-radius: 100%;
+  width: 32vw;
+  height: 70vh;
+}
+
+.sphere-one::before,
+.sphere-two::before {
+  position: absolute;
+  /* background-color: var(--light-purple); */
+  bottom: 0;
+  border-radius: 100%;
+}
+
+.sphere-one::before {
+  right: 0;
+}
+
+.sphere-two::before {
+  left: 0;
+  transform: translateX(10%);
+}
+
+
+
+
+
+/* .speedometer--internal-container {
+  background-color: var(--purple);
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 25rem;
+} */
+

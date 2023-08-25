@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44.812" height="49.834" viewBox="0 0 44.812 49.834">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f3ed93"/>
+      <stop offset="0.188" stop-color="#daa63c"/>
+      <stop offset="0.492" stop-color="#f3ed93"/>
+      <stop offset="0.763" stop-color="#deb04a"/>
+      <stop offset="1" stop-color="#b08442"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="Path_32" data-name="Path 32" d="M2.046,25.331,23.913,3.463V15.288H43.379V34.148H23.913V46.455ZM25.349,0,0,25.347,25.349,49.834V35.583H44.812V13.852H25.349Z" stroke="#707070" stroke-width="1" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Right_Indicator_Light" data-name="Right Indicator Light" transform="translate(44.812 49.834) rotate(180)">
+    <g id="Group_161" data-name="Group 161" clip-path="url(#clip-path)">
+      <g id="Rectangle_81" data-name="Rectangle 81" transform="translate(0 0)" stroke="#707070" stroke-width="1" fill="url(#linear-gradient)">
+        <rect width="44.812" height="49.834" stroke="none"/>
+        <rect x="0.5" y="0.5" width="43.812" height="48.834" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

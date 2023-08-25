@@ -1,5 +1,6 @@
 // import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css';
 
 export default function App() {
@@ -10,7 +11,7 @@ export default function App() {
 
   // Get various components of the current date and time
   const year = currentDate.getFullYear();
-  const month = currentDate.getMonth() + 1; 
+  const month = currentDate.toLocaleString('default', { month: 'short' });
   const day = currentDate.getDate();
   const hours = currentDate.getHours();
   const minutes = currentDate.getMinutes();
@@ -24,9 +25,9 @@ export default function App() {
 
 
   return (
-    <div className="d-flex grand-parent">
+    <div className="d-flex grand-parent ">
       <div className="container main row ">
-        <div className="col-5 h-75 left-border yellow-border justify-content-center align-items-center d-flex">
+        <div className="col-5 h-75 left-border yellow-border justify-content-center align-items-center d-flex purple">
         <div className="row align-items-center">
         <div className="col-2 h-50 bottom-border">
                   <img src="left-indicator-light.svg" alt="left" className="img-fluid" />
@@ -58,12 +59,37 @@ export default function App() {
             </div>
         </div>
 
-        <div className="col-2 h-75 yellow-border">
-            <div className="current-date white-text pt-2">{formattedDateTime}</div>
-          center
+        <div className="col-2 h-75 yellow-border d-flex flex-column purple justify-content-center align-items-center">
+            <div className="current-date white-text ">{formattedDateTime}</div>
+            {/* <div className='bi-alarm' style={{fontSize:'2rem', color: 'cornflowerblue'}}></div> */}
+            <input
+              type="text"
+              className="form-control"
+              placeholder='Hi Lethabo'
+              pt-4
+            />
+            <div className='pt-8'>
+              <img src='nav-map.png' alt='Navigation map' className='img-fluid pt-8 w-80' />
+            </div>
+
+            <div className='pt-8 white-text'>
+              24 Days Left
+            </div>
+
+           
+              <div className='d-flex justify-content-center flex-row gap-4 mt-5 z-1'>
+                <img src='wifi-icon.svg' alt='Wifi icon' />
+                <img src='bluetooth-icon.svg' alt='bluetooth icon' />
+                <img src='location-icon.svg' alt='location icon' />
+                <img src='phone-icon.svg' alt='phone icon' />
+                <img src='music-icon.svg' alt='music icon' />
+                <img src='mic-icon.svg' alt='mic icon' />
+              </div>
+          
+
         </div>
 
-        <div className="col-5 h-75 right-border yellow-border  justify-content-center align-items-center d-flex">
+        <div className="col-5 h-75 right-border yellow-border  justify-content-center align-items-center d-flex purple">
             <div className="row align-items-center">
                 <div className="col-10">
                     <div className="round-div">
@@ -79,7 +105,10 @@ export default function App() {
                                 <div className="p85 white-text">85%</div>
                                 <div className="p100 white-text">100%</div>
                                 <div className="smallest-circle d-flex justify-content-center align-items-center ">
-                                    <div className="white-text shadow-text" style={{textAlign: 'center'}}>55% <br/> Estimated KPI</div>
+                                    <div className="white-text shadow-text" style={{textAlign: 'center'}}>
+                                    <h1>55</h1>% 
+                                    <p className=''>Estimated KPI</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -1,10 +1,17 @@
-// import { useState } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css';
 
 export default function App() {
-  // const [userName, setUserName] = useState('{User Name}');
+  const [userName, setUserName] = useState(' ');
+
+  // get the current user's name and set it to the state. Also save the name in the input field
+  useEffect(() => {
+    const promptName = prompt('Hey there, please enter your name.');
+    setUserName(promptName || '{User Name}!');
+  }, []);
 
   // get current date and time
   const currentDate = new Date();
@@ -23,6 +30,7 @@ export default function App() {
   const formattedDateTime = `${day} ${month} ${year} ${hours}:${minutes}${ampm}`;
 
 
+  
 
   return (
     <div className="d-flex grand-parent ">
@@ -66,18 +74,28 @@ export default function App() {
             </div>
         </div>
 
-        <div className="col-2 h-75 yellow-border gap-1 d-flex flex-column purple justify-content-center align-items-center">
+        <div className="col-2 h-75 gap-1 d-flex flex-column purple justify-content-center align-items-center">
             <div className="current-date white-text ">{formattedDateTime}</div>
             {/* <div className='bi-alarm' style={{fontSize:'2rem', color: 'cornflowerblue'}}></div> */}
             <input
               type="text"
-              className="form-control light-background "
-              placeholder='Hi {User Name}!'
-              pt-4
-              style={{ color: 'white', border: 'none' }}
+              className="form-control light-background bi-person-fill  "
+
+              // placeholder={`Hi ${userName || 'User Name'}!`}
+              // placeholder={`Hi ${userName || 'User Name'}!`}
+              // onChange={(e) => setUserName(e.target.value)}
+              disabled
+              value={`Hi ${userName || 'User Name'}!`}
+              // pt-4
+              
+              style={{ color: 'white', border: 'none', fontSize: '1rem' }}
             />
             <div className='pt-8'>
               <img src='nav-map.png' alt='Navigation map' className='img-fluid pt-8 w-80' />
+            </div>
+
+            <div>
+            <img src='nav-icon.svg' alt='Navigation Pin Icon' />
             </div>
 
             <div className='pt-8 white-text'>

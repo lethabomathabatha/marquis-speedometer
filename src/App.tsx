@@ -46,8 +46,15 @@ export default function App() {
                                 <div className="p75 white-text">400m</div>
                                 <div className="p85 white-text">500m</div>
                                 <div className="p100 white-text">600m</div>
-                                <div className="smallest-circle d-flex justify-content-center align-items-center ">
-                                    <div className="white-text shadow-text" style={{textAlign: 'center'}}>250 <br/> Marquis Goal</div>
+
+                                <div className="smallest-circle d-flex flex-column text-center justify-content-center align-items-center white-text m-0">
+                                    {/* <div className="white-text m-0 text-center align-items-center" style={{ }}> */}
+                                    <div>
+                                      <p style={{fontSize: '3rem'}}>250</p>  
+                                      <p >Marquis Goal</p>
+                                    </div>
+                                      
+                                    {/* </div> */}
                                 </div>
                             </div>
                         </div>
@@ -59,14 +66,15 @@ export default function App() {
             </div>
         </div>
 
-        <div className="col-2 h-75 yellow-border d-flex flex-column purple justify-content-center align-items-center">
+        <div className="col-2 h-75 yellow-border gap-1 d-flex flex-column purple justify-content-center align-items-center">
             <div className="current-date white-text ">{formattedDateTime}</div>
             {/* <div className='bi-alarm' style={{fontSize:'2rem', color: 'cornflowerblue'}}></div> */}
             <input
               type="text"
-              className="form-control"
-              placeholder='Hi Lethabo'
+              className="form-control light-background "
+              placeholder='Hi {User Name}!'
               pt-4
+              style={{ color: 'white', border: 'none' }}
             />
             <div className='pt-8'>
               <img src='nav-map.png' alt='Navigation map' className='img-fluid pt-8 w-80' />

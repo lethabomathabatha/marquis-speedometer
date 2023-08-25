@@ -94,3 +94,151 @@ body::before {
   border-radius: 25rem;
 } */
 
+.main{
+  height: 600px !important;
+  /* yellow border. left and right with radius*/
+  /*center items vertical and horizontal*/
+  justify-content: center;
+  align-items: center;
+  width: 1264px !important;
+ 
+}
+
+
+.grand-parent{
+  /*center items vertical and horizontal*/
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.right-border{
+  border-bottom-right-radius: 75%;
+  border-top-right-radius: 75%;
+}
+
+.left-border{
+  border-bottom-left-radius: 75%;
+  border-top-left-radius: 75%;
+}
+
+.yellow-border{
+  border: 5px solid #f1c40f !important;
+}
+
+.round-div{
+  width: 350px;
+  height: 350px;
+  /*with a white border*/
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.right-arrow{
+  /*background as image*/
+  background-image: url(/Aluveapp/style/RightIndicatorLight.svg);
+}
+
+
+element.style {
+}
+.mid-circle {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: conic-gradient( from 18deg, #552755 0% 30%, transparent 30% 60%, yellow 60% 100% );
+  background-size: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 12px;
+  margin-left: 12px;
+  border: 0px;
+}
+
+.child-circle {
+  width: 294px;
+  height: 295px;
+  border-radius: 50%;
+  margin-top: 12px;
+  margin-left: 12px;
+  background-color: #2d0d5d;
+  position: absolute;
+}
+
+.smallest-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 12px;
+  margin-left: 12px;
+  background-color: black;
+  position: absolute;
+}
+
+.p50{
+  position: absolute;
+  top: 1px;
+}
+
+.p100 {
+  position: absolute;
+  top: 220px;
+  right: 30px;
+}
+
+.p85 {
+  position: absolute;
+  top: 160px;
+  right: 5px;
+}
+
+.p75 {
+  position: absolute;
+  top: 90px;
+  right: 10px;
+}
+
+.p65 {
+  position: absolute;
+  top: 34px;
+  right: 50px;
+}
+
+.p35 {
+  position: absolute;
+  top: 34px;
+  left: 54px;
+}
+
+.p25 {
+  position: absolute;
+  top: 90px;
+  left: 10px;
+}
+
+.p10 {
+  position: absolute;
+  top: 160px;
+  left: 4px;
+}
+
+.p0 {
+  position: absolute;
+  top: 220px;
+  left: 30px;
+}
+
+
+
+
+.white-text {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.shadow-text {
+  text-align: center;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255); 
+
+}

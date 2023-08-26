@@ -10,7 +10,7 @@ export default function App() {
   // get the current user's name and set it to the state. Also save the name in the input field
   useEffect(() => {
     const promptName = prompt('Hey there, please enter your name.');
-    setUserName(promptName || '{User Name}!');
+    setUserName(promptName || '{User Name}');
   }, []);
 
   // get current date and time
@@ -29,8 +29,11 @@ export default function App() {
   // Format the date and time as a string
   const formattedDateTime = `${day} ${month} ${year} ${hours}:${minutes}${ampm}`;
 
+  // calculate the remaining days in the month. E.g. on the 01 of Janaury display 30 Days To Go
+  const daysInMonth = currentDate.getMonth()
+  const remainingDays = daysInMonth - day
 
-  
+  // toggle image clicks
 
   return (
     <div className="d-flex grand-parent ">
@@ -38,7 +41,7 @@ export default function App() {
         <div className="col-5 h-75 left-border yellow-border justify-content-center align-items-center d-flex purple">
         <div className="row align-items-center">
         <div className="col-2 h-50 bottom-border">
-                  <img src="left-indicator-light.svg" alt="left" className="img-fluid" />
+                  <img src="left-indicator-light.svg" alt="left" className="img-fluid" style={{cursor: 'pointer'}}/>
                 </div>
 
                 <div className="col-10">
@@ -55,10 +58,10 @@ export default function App() {
                                 <div className="p85 white-text">500m</div>
                                 <div className="p100 white-text">600m</div>
 
-                                <div className="smallest-circle d-flex flex-column text-center justify-content-center align-items-center white-text m-0">
+                                <div className="smallest-circle d-flex flex-column text-center justify-content-center align-items-center white-text">
                                     {/* <div className="white-text m-0 text-center align-items-center" style={{ }}> */}
                                     <div>
-                                      <p style={{fontSize: '3rem'}}>250</p>  
+                                      <span style={{fontSize: '3rem', }}>250</span>  
                                       <p >Marquis Goal</p>
                                     </div>
                                       
@@ -87,7 +90,7 @@ export default function App() {
               disabled
               value={`Hi ${userName || 'User Name'}!`}
               // pt-4
-              
+
               style={{ color: 'white', border: 'none', fontSize: '1rem' }}
             />
             <div className='pt-8'>
@@ -95,21 +98,21 @@ export default function App() {
             </div>
 
             <div>
-            <img src='nav-icon.svg' alt='Navigation Pin Icon' />
+            <img src='nav-icon.svg' alt='Navigation Icon' className='nav-icon'/>
             </div>
 
             <div className='pt-8 white-text'>
-              24 Days Left
+              {remainingDays} Days To Go
             </div>
 
            
-              <div className='d-flex justify-content-center flex-row gap-4 mt-5 z-1'>
-                <img src='wifi-icon.svg' alt='Wifi icon' />
-                <img src='bluetooth-icon.svg' alt='bluetooth icon' />
-                <img src='location-icon.svg' alt='location icon' />
-                <img src='phone-icon.svg' alt='phone icon' />
-                <img src='music-icon.svg' alt='music icon' />
-                <img src='mic-icon.svg' alt='mic icon' />
+              <div className='d-flex justify-content-center flex-row gap-4 mt-4 z-1'>
+                <img src='wifi-icon.svg' alt='Wifi icon' style={{cursor: 'pointer'}}/>
+                <img src='bluetooth-icon.svg' alt='bluetooth icon' style={{cursor: 'pointer'}}/>
+                <img src='location-icon.svg' alt='location icon' style={{cursor: 'pointer'}}/>
+                <img src='phone-icon.svg' alt='phone icon' style={{cursor: 'pointer'}}/>
+                <img src='music-icon.svg' alt='music icon' style={{cursor: 'pointer'}}/>
+                <img src='mic-icon.svg' alt='mic icon' style={{cursor: 'pointer'}}/>
               </div>
           
 
@@ -132,7 +135,7 @@ export default function App() {
                                 <div className="p100 white-text">100%</div>
                                 <div className="smallest-circle d-flex justify-content-center align-items-center ">
                                     <div className="white-text shadow-text" style={{textAlign: 'center'}}>
-                                    <h1>55</h1>% 
+                                    <span style={{fontSize: '3rem', }}>55</span> % 
                                     <p className=''>Estimated KPI</p>
                                     </div>
                                 </div>
@@ -142,7 +145,7 @@ export default function App() {
                     </div>
                 </div>
                 <div className="col-2 h-50 bottom-border">
-                    <img src="right-indicator-light.svg" alt="right" className="img-fluid" />
+                    <img src="right-indicator-light.svg" alt="right" className="img-fluid " style={{cursor: 'pointer'}} />
                 </div>
             </div>
         </div>

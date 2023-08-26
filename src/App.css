@@ -241,11 +241,15 @@ element.style {
   font-size: 14px;
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+} 
 
 .light-background {
   background-color: rgba(255, 255, 255, 0.056) !important;
   opacity: 0.1;
+}
+
+.nav-icon {
+  
 }
 
 /* .shadow-text {

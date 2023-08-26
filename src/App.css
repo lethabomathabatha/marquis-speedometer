@@ -146,17 +146,33 @@ body::before {
 
 element.style {
 }
+
 .mid-circle {
   width: 320px;
   height: 320px;
   border-radius: 50%;
+  /* add animation to the background */
   background: conic-gradient( from 18deg, #552755 0% 30%, transparent 30% 60%, yellow 60% 100% );
   background-size: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin-top: 12px;
   margin-left: 12px;
   border: 0px;
+  animation-duration: 3s;
+  animation-name: fillGauge;
+  animation-timing-function: ease-out;
 }
+
+/* but only the background (  background: conic-gradient( from 18deg, #552755 0% 30%, transparent 30% 60%, yellow 60% 100% )*/
+
+
+/* @keyframes fillGauge {
+ 
+  to {
+    background: conic-gradient( from 18deg, #552755 0% 30%, transparent 30% 60%, yellow 60% 100% );
+  }
+} */
+
 
 .child-circle {
   width: 294px;
@@ -249,6 +265,18 @@ element.style {
 }
 
 .nav-icon {
+  animation-duration: 6s;
+  animation-name: slideUp;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40%);
+  }
+  to {
+    transform: translateY(0%);
+  }
   
 }
 

@@ -30,7 +30,7 @@ export default function App() {
   const formattedDateTime = `${day} ${month} ${year} ${hours}:${minutes}${ampm}`;
 
   // calculate the remaining days in the month. E.g. on the 01 of Janaury display 30 Days To Go
-  const daysInMonth = currentDate.getMonth()
+  const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
   const remainingDays = daysInMonth - day
 
   // toggle image clicks

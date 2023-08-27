@@ -45,65 +45,9 @@ body::before {
   background-repeat: no-repeat;
 }
 
-.speedometer-container {
-  position: relative;
-  /* background-color: var(--light-purple); */
-  /* height: 80vh; */
-  /* width: 90%; */
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  border: 4px solid white;
-  border-radius: 25rem;
-  padding: 1rem;
-  /* gap: 8rem; */
-}
-
-.sphere-one,
-.sphere-two {
-  position: relative;
-  background-color: yellow;
-  border-radius: 100%;
-  width: 32vw;
-  height: 70vh;
-}
-
-.sphere-one::before,
-.sphere-two::before {
-  position: absolute;
-  /* background-color: var(--light-purple); */
-  bottom: 0;
-  border-radius: 100%;
-}
-
-.sphere-one::before {
-  right: 0;
-}
-
-.sphere-two::before {
-  left: 0;
-  transform: translateX(10%);
-}
-
-
-
-
-
-/* .speedometer--internal-container {
-  background-color: var(--purple);
-  height: 70vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid white;
-  border-radius: 25rem;
-} */
 
 .main{
   height: 600px !important;
-  /* yellow border. left and right with radius*/
-  /*center items vertical and horizontal*/
   justify-content: center;
   align-items: center;
   width: 1264px !important;
@@ -128,10 +72,6 @@ body::before {
   border-top-left-radius: 75%;
 }
 
-/* .yellow-border{
-  border: 5px solid #f1c40f !important;
-} */
-
 .round-div{
   width: 350px;
   height: 350px;
@@ -140,22 +80,10 @@ body::before {
   border-radius: 50%;
 }
 
-.right-arrow{
-  /*background as image*/
-  background-image: url(/Aluveapp/style/RightIndicatorLight.svg);
-}
-
-
-element.style {
-}
-
-
-
 .mid-circle {
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  /* add animation to the background */
   background: conic-gradient( from 18deg, var(--v-light-purple) 0% 30%, transparent 30% 60%, var(--gold) 20% );
   background-size: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -166,9 +94,6 @@ element.style {
   animation-name: fillGauge;
   animation-timing-function: ease-out;
 }
-
-
-/* but only the background (  background: conic-gradient( from 18deg, #552755 0% 30%, transparent 30% 60%, yellow 60% 100% )*/
 
 
 /* @keyframes fillGauge {
@@ -195,7 +120,6 @@ element.style {
   border-radius: 50%;
   margin-top: 12px;
   margin-left: 12px;
-  /* background-color: black; */
   background: radial-gradient(#535353af, #252525, #0f0f0f, black);
   position: absolute;
   box-shadow: #7756B7 0 0 100px;
@@ -255,8 +179,6 @@ element.style {
 }
 
 
-
-
 .white-text {
   color: white;
   font-size: 14px;
@@ -282,7 +204,6 @@ element.style {
 
 
 .nav-icon {
-  /* position: absolute; */
   animation-name: moveIcon;
   animation-fill-mode: forwards; 
 }
@@ -303,25 +224,10 @@ element.style {
   padding-left: 30px;
 }
 
-/* .nav-icon {
-  position: relative;
-  top: -3rem;
-  animation-duration: 6s;
-  animation-name: slideUp;
-  animation-timing-function: ease-out;
+.weather-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="%237756B7" class="bi bi-cloud-sun-fill" viewBox="0 0 16 16"><path d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5h-.027z"/><path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708l.707-.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708l-.708-.707zm1.734 3.374a2 2 0 1 1 3.296 2.198c.199.281.372.582.516.898a3 3 0 1 0-4.84-3.225c.352.011.696.055 1.028.129zm4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377zM14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(-40%);
-  }
-} */
-
-/* .shadow-text {
-  text-align: center;
-  text-shadow: 0px 0px 10px rgb(255, 255, 255); 
-
-} */

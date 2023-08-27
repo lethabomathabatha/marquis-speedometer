@@ -29,7 +29,7 @@ export default function App() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${CITY_NAME}&appid=${API_KEY}&units=metric`)
       .then(res => res.json())
       .then(data => {
-        setCurrentTemperature(data.main.temp);
+        setCurrentTemperature(Math.round(data.main.temp));
       })
   })
   
@@ -129,8 +129,13 @@ export default function App() {
   return (
     <div className="d-flex grand-parent ">
       <div className="container main row ">
+        
         <div className="col-5 h-75 left-border yellow-border justify-content-center align-items-center d-flex purple">
+          
         <div className="row align-items-center">
+          <div className="d-flex flex-row  justify-content-end">
+            <span className='light-purple-text weather-icon'>{currentTemperature}°</span>
+          </div>
         <div className="col-2 h-50 bottom-border">
                   <img src="left-indicator-light.svg" alt="left" className="img-fluid" style={{cursor: 'pointer'}}/>
                 </div>
@@ -169,8 +174,7 @@ export default function App() {
         </div>
 
         <div className="col-2 h-75 gap-1 d-flex flex-column purple justify-content-center align-items-center">
-            <h1>Johannesburg</h1>
-            <p>{currentTemperature}</p>
+         
             <div className="current-date light-purple-text ">{formattedDateTime}</div>
         
             <Modal show={showModal} onHide={handleModalClose}>

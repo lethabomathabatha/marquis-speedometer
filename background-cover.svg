@@ -1,0 +1,20 @@
+<svg id="Image_cover" data-name="Image cover" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_7" data-name="Rectangle 7" width="1920" height="1080" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_10" data-name="Group 10" clip-path="url(#clip-path)">
+    <g id="Group_9" data-name="Group 9">
+      <g id="Group_8" data-name="Group 8" clip-path="url(#clip-path)">
+        <g id="Group_7" data-name="Group 7" opacity="0.69" style="mix-blend-mode: multiply;isolation: isolate">
+          <g id="Group_6" data-name="Group 6">
+            <g id="Group_5" data-name="Group 5" clip-path="url(#clip-path)">
+              <rect id="Rectangle_4" data-name="Rectangle 4" width="1920" height="1080" fill="#321063"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

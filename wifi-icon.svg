@@ -1,0 +1,28 @@
+<svg id="Wifi_Icon" data-name="Wifi Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.286" height="22.428" viewBox="0 0 37.286 22.428">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_61" data-name="Rectangle 61" width="37.286" height="22.428" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_60" data-name="Rectangle 60" width="37.286" height="22.427" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Rectangle_59" data-name="Rectangle 59" width="37.286" height="13.821" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_117" data-name="Group 117" clip-path="url(#clip-path)">
+    <g id="Group_116" data-name="Group 116" transform="translate(0 0)">
+      <g id="Group_115" data-name="Group 115" clip-path="url(#clip-path-2)">
+        <g id="Group_114" data-name="Group 114" transform="translate(0 0)" opacity="0.6">
+          <g id="Group_113" data-name="Group 113" transform="translate(0 0)">
+            <g id="Group_112" data-name="Group 112" clip-path="url(#clip-path-3)">
+              <path id="Path_19" data-name="Path 19" d="M36.875,10.227C32.687,4.1,26.17.107,18.809,0S4.81,3.7.449,9.7A2.443,2.443,0,0,0,.7,12.833a1.788,1.788,0,0,0,2.743-.3,18.636,18.636,0,0,1,15.3-8.084A18.619,18.619,0,0,1,33.8,12.969a1.794,1.794,0,0,0,2.736.38,2.44,2.44,0,0,0,.342-3.122" transform="translate(0 0)" fill="#7756b7"/>
+            </g>
+          </g>
+        </g>
+        <path id="Path_20" data-name="Path 20" d="M16.972,5.846a14.95,14.95,0,0,0-12.617,7.1,1.659,1.659,0,0,0,.264,2.11,1.221,1.221,0,0,0,1.853-.308A12.365,12.365,0,0,1,16.931,8.862a12.378,12.378,0,0,1,10.282,6.186,1.219,1.219,0,0,0,1.841.358,1.647,1.647,0,0,0,.322-2.1,14.956,14.956,0,0,0-12.4-7.455" transform="translate(1.716 2.45)" fill="#7756b7"/>
+        <path id="Path_21" data-name="Path 21" d="M15.495,10.648a8.892,8.892,0,0,0-7.963,5.224A1.367,1.367,0,0,0,7.95,17.6a1.046,1.046,0,0,0,1.519-.484,6.677,6.677,0,0,1,5.989-3.927,6.679,6.679,0,0,1,5.871,4.1,1.044,1.044,0,0,0,1.5.525,1.357,1.357,0,0,0,.464-1.714,8.872,8.872,0,0,0-7.8-5.453" transform="translate(3.097 4.463)" fill="#7756b7"/>
+      </g>
+    </g>
+  </g>
+</svg>

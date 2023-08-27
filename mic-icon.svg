@@ -1,0 +1,24 @@
+<svg id="Mic_Icon" data-name="Mic Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.058" height="27.993" viewBox="0 0 18.058 27.993">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_72" data-name="Rectangle 72" width="18.058" height="27.993" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_71" data-name="Rectangle 71" width="18.058" height="27.994" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_144" data-name="Group 144" clip-path="url(#clip-path)">
+    <g id="Group_143" data-name="Group 143" transform="translate(0 0)">
+      <g id="Group_142" data-name="Group 142" clip-path="url(#clip-path-2)">
+        <g id="Group_141" data-name="Group 141" transform="translate(0 0)" opacity="0.6">
+          <g id="Group_140" data-name="Group 140" transform="translate(0 0)">
+            <g id="Group_139" data-name="Group 139" clip-path="url(#clip-path)">
+              <path id="Path_26" data-name="Path 26" d="M2.267,9.5c0-1.223-.014-2.447,0-3.67a5.808,5.808,0,0,1,11.613-.219q.081,3.793,0,7.588a5.809,5.809,0,0,1-11.616-.186c0-1.171,0-2.343,0-3.514Z" transform="translate(0.948 0)" fill="#7756b7"/>
+              <path id="Path_27" data-name="Path 27" d="M8.049,22.495c.006-.14.016-.243.016-.343,0-1.141,0-2.281.007-3.422,0-.223-.068-.3-.29-.331a8.859,8.859,0,0,1-6.663-4.587A8.644,8.644,0,0,1,0,9.492a.939.939,0,0,1,.921-.975.914.914,0,0,1,.989.9A7.049,7.049,0,0,0,2.665,12.6a6.858,6.858,0,0,0,6.51,3.95,7.009,7.009,0,0,0,6.8-5.6,11.168,11.168,0,0,0,.16-1.45.966.966,0,1,1,1.924.108,8.9,8.9,0,0,1-5.472,8.15,13.492,13.492,0,0,1-2.327.649c-.149.04-.27.045-.267.254.007,1.233,0,2.467.006,3.7a.766.766,0,0,0,.033.122c.1,0,.211.016.321.016.623,0,1.243,0,1.866,0a.963.963,0,1,1,.007,1.923q-3.189.006-6.375,0A.964.964,0,1,1,5.859,22.5c.717-.006,1.429,0,2.19,0" transform="translate(0 3.57)" fill="#7756b7"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

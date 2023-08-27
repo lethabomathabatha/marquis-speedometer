@@ -155,13 +155,12 @@ export default function App() {
                                 <div className="p100 white-text">600m</div>
 
                                 <div className="smallest-circle d-flex flex-column text-center justify-content-center align-items-center white-text">
-                                    {/* <div className="white-text m-0 text-center align-items-center" style={{ }}> */}
                                     <div>
                                       <span ref={goalRef} style={{fontSize: '3rem', }}>0</span>  
                                       <p >Marquis Goal</p>
                                     </div>
                                       
-                                    {/* </div> */}
+                               
                                 </div>
                             </div>
                         </div>

@@ -7,7 +7,8 @@ import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import './App.css';
 
-const API_KEY: string = import.meta.env.VITE_REACT_API_KEY as string;
+// const API_KEY: string = import.meta.env.VITE_REACT_API_KEY as string;
+const API_KEY: string = 'd2fcf3650200fb0c7a1cb3d2a8b69cd5' as string;
 const CITY_NAME: string = 'Johannesburg,za';
 
 

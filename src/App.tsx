@@ -9,8 +9,6 @@ import './App.css';
 
 const API_KEY = import.meta.env.VITE_REACT_API_KEY
 const CITY_NAME = 'Johannesburg,za'
-const LATITUDE = -26.2041;
-const LONGITUDE = 28.0473;
 
 export default function App() {
   const [userName, setUserName] = useState('');

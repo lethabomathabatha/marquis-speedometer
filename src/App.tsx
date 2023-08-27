@@ -10,7 +10,7 @@ import './App.css';
 const API_KEY: string = import.meta.env.VITE_REACT_API_KEY as string;
 const CITY_NAME: string = 'Johannesburg,za';
 
-interface Props {}
+
 
 interface WeatherData {
   main: {
@@ -18,7 +18,7 @@ interface WeatherData {
   };
 }
 
-export default function App(props: Props) {
+export default function App() {
   const [userName, setUserName] = useState<string>('');
   const [showModal, setShowModal] = useState<boolean>(true);
   const [modalName, setModalName] = useState<string>('');
@@ -39,15 +39,7 @@ export default function App(props: Props) {
       });
   }, []);
   
-
-  // get the current user's name and set it to the state. Also save the name in the input field
-  // useEffect(() => {
-  //   const promptName = prompt('Hey there, please enter your name.');
-  //   setUserName(promptName || '{User Name}');
-  // }, []);
-
-
-
+  // name request modal on page load
   const handleModalClose = () => {
     setShowModal(false);
   }
@@ -130,7 +122,7 @@ useEffect(() => {
   // calculate the remaining days in the month. E.g. on the 01 of Janaury display 30 Days To Go
   const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
   const remainingDays = daysInMonth - day
-  const daySegmentHeight = 100 / daysInMonth
+  // const daySegmentHeight = 100 / daysInMonth
   const progress = (daysInMonth - remainingDays) / daysInMonth
   const progressValue = `calc(-100% + ${progress * 100}%)`
 

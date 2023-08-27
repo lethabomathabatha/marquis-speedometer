@@ -49,9 +49,6 @@ export default function App() {
     setShowModal(false);
   }
 
-  console.log(API_KEY)
-  console.log('hello')
-
  // setting the initial value of the percentage
 useEffect(() => {
   const startValue = 0;

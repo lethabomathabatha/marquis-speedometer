@@ -7,29 +7,37 @@ import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import './App.css';
 
-const API_KEY = import.meta.env.VITE_REACT_API_KEY
-const CITY_NAME = 'Johannesburg,za'
+const API_KEY: string = import.meta.env.VITE_REACT_API_KEY as string;
+const CITY_NAME: string = 'Johannesburg,za';
 
-export default function App() {
-  const [userName, setUserName] = useState('');
-  const [showModal, setShowModal] = useState(true);
-  const [modalName, setModalName] = useState('');
-  const [currentTemperature, setCurrentTemperature] = useState(null);
+interface Props {}
 
-  const goalRef = useRef(null);
-  const percentageRef = useRef(null);
-  const finalValue = 55;
-  const finalGoalRef = 250;
-  const animationDuration = 3000; 
+interface WeatherData {
+  main: {
+    temp: number;
+  };
+}
+
+export default function App(props: Props) {
+  const [userName, setUserName] = useState<string>('');
+  const [showModal, setShowModal] = useState<boolean>(true);
+  const [modalName, setModalName] = useState<string>('');
+  const [currentTemperature, setCurrentTemperature] = useState<number | null>(null);
+
+  const goalRef = useRef<HTMLSpanElement>(null);
+  const percentageRef = useRef<HTMLSpanElement>(null);
+  const finalValue: number = 55;
+  const finalGoalRef: number = 250;
+  const animationDuration: number = 3000;
 
   // get location's temperature from api
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${CITY_NAME}&appid=${API_KEY}&units=metric`)
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data: WeatherData) => {
         setCurrentTemperature(Math.round(data.main.temp));
-      })
-  })
+      });
+  }, []);
   
 
   // get the current user's name and set it to the state. Also save the name in the input field
@@ -52,50 +60,58 @@ export default function App() {
   console.log(API_KEY)
   console.log('hello')
 
-  // setting the initial value of the percentage
-  useEffect(() => {
-    const startValue = 0;
-    let startTime = null;
+ // setting the initial value of the percentage
+useEffect(() => {
+  const startValue = 0;
+  let startTime: number | null = null;
 
-    function updateValue(timestamp) {
-      if (!startTime) startTime = timestamp;
+  function updateValue(timestamp: number) {
+    if (!startTime) startTime = timestamp;
 
-      const progress = timestamp - startTime;
-      const increment = (finalValue - startValue) * (progress / animationDuration);
+    const progress = timestamp - startTime;
+    const increment = (finalValue - startValue) * (progress / animationDuration);
 
-      if (progress < animationDuration) {
-        percentageRef.current.textContent = Math.round(startValue + increment);
-        requestAnimationFrame(updateValue);
-      } else {
-        percentageRef.current.textContent = finalValue;
+    if (progress < animationDuration) {
+      if (percentageRef.current) {
+        percentageRef.current.textContent = Math.round(startValue + increment).toString();
+      }
+      requestAnimationFrame(updateValue);
+    } else {
+      if (percentageRef.current) {
+        percentageRef.current.textContent = finalValue.toString();
       }
     }
+  }
 
-    requestAnimationFrame(updateValue);
-  }, []);
+  requestAnimationFrame(updateValue);
+}, []);
 
+// Animation for the 250 value
+useEffect(() => {
+  const startValue = 0;
+  let startTime: number | null = null;
 
-    // Animation for the 250 value
-    useEffect(() => {
-      const startValue = 0;
-      let startTime = null;
-  
-      function updateGoal(timestamp) {
-        if (!startTime) startTime = timestamp;
-  
-        const progress = timestamp - startTime;
-        const increment = (finalGoalRef - startValue) * (progress / animationDuration);
-  
-        if (progress < animationDuration) {
-          goalRef.current.textContent = Math.round(startValue + increment);
-          requestAnimationFrame(updateGoal);
-        } else {
-          goalRef.current.textContent = finalGoalRef;
-        }
+  function updateGoal(timestamp: number) {
+    if (!startTime) startTime = timestamp;
+
+    const progress = timestamp - startTime;
+    const increment = (finalGoalRef - startValue) * (progress / animationDuration);
+
+    if (progress < animationDuration) {
+      if (goalRef.current) {
+        goalRef.current.textContent = Math.round(startValue + increment).toString();
       }
-  
       requestAnimationFrame(updateGoal);
-    }, []);
+    } else {
+      if (goalRef.current) {
+        goalRef.current.textContent = finalGoalRef.toString();
+      }
+    }
+  }
+
+  requestAnimationFrame(updateGoal);
+}, []);
+
 
   // get current date and time
   const currentDate = new Date();

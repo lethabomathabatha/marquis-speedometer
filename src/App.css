@@ -5,7 +5,9 @@
   text-align: center;
   --purple: #321063;
   --light-purple: #7756B7;
-
+  --v-light-purple: #bba1de5a;
+  --gold-gradient: linear-gradient(45deg, #FFC107 0%, #FFD54F 100%); 
+  --gold: #edaf2bec; 
 }
 
 .light-purple {
@@ -147,12 +149,14 @@ body::before {
 element.style {
 }
 
+
+
 .mid-circle {
   width: 320px;
   height: 320px;
   border-radius: 50%;
   /* add animation to the background */
-  background: conic-gradient( from 18deg, #552755 0% 30%, transparent 30% 60%, yellow 60% 100% );
+  background: conic-gradient( from 18deg, var(--v-light-purple) 0% 30%, transparent 30% 60%, var(--gold) 20% );
   background-size: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin-top: 12px;
@@ -162,6 +166,7 @@ element.style {
   animation-name: fillGauge;
   animation-timing-function: ease-out;
 }
+
 
 /* but only the background (  background: conic-gradient( from 18deg, #552755 0% 30%, transparent 30% 60%, yellow 60% 100% )*/
 
@@ -259,12 +264,48 @@ element.style {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
 
+.light-purple-text {
+  color: var(--light-purple);
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .light-background {
   background-color: rgba(255, 255, 255, 0.056) !important;
   opacity: 0.1;
 }
 
+.timeline-container {
+  position: relative;
+  overflow: hidden;
+}
+
+
 .nav-icon {
+  /* position: absolute; */
+  animation-name: moveIcon;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes moveIcon {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(calc(-100% + var(--progress) * 100%));
+  }
+}
+
+.icon-input {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%237756B7" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M8 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 30px;
+}
+
+/* .nav-icon {
+  position: relative;
+  top: -3rem;
   animation-duration: 6s;
   animation-name: slideUp;
   animation-timing-function: ease-out;
@@ -272,13 +313,12 @@ element.style {
 
 @keyframes slideUp {
   from {
-    transform: translateY(40%);
-  }
-  to {
     transform: translateY(0%);
   }
-  
-}
+  to {
+    transform: translateY(-40%);
+  }
+} */
 
 /* .shadow-text {
   text-align: center;

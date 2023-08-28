@@ -103,6 +103,23 @@ body::before {
   }
 } */
 
+.yellow-shadow-left {
+  box-shadow: 0 0 40px var(--gold);
+}
+
+.yellow-shadow-center {
+  box-shadow: 
+  0px 14px 9px -10px var(--gold),
+  0px -14px 9px -10px var(--gold); 
+}
+
+
+.yellow-shadow-right {
+  box-shadow:  0px 0px 40px 0  var(--gold);
+}
+
+
+
 
 .child-circle {
   width: 294px;

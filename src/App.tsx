@@ -134,15 +134,16 @@ useEffect(() => {
     <div className="d-flex grand-parent ">
       <div className="container main row ">
         
-        <div className="col-5 h-75 left-border yellow-border justify-content-center align-items-center d-flex purple">
+        <div className="col-5 h-75 left-border yellow-shadow-left justify-content-center align-items-center d-flex purple">
           
         <div className="row align-items-center">
           <div className="d-flex flex-row  justify-content-end">
             <span className='light-purple-text weather-icon'>{currentTemperature}°</span>
           </div>
-        <div className="col-2 h-50 bottom-border">
-                  <img src="left-indicator-light.svg" alt="left" className="img-fluid" style={{cursor: 'pointer'}}/>
-                </div>
+
+          <div className="col-2 h-50 bottom-border">
+            <img src="left-indicator-light.svg" alt="left" className="img-fluid" style={{cursor: 'pointer'}}/>
+          </div>
 
                 <div className="col-10">
                     <div className="round-div">
@@ -173,7 +174,7 @@ useEffect(() => {
             </div>
         </div>
 
-        <div className="col-2 h-75 gap-1 d-flex flex-column purple justify-content-center align-items-center">
+        <div className="col-2 h-75 gap-1 d-flex z-0 flex-column purple yellow-shadow-center justify-content-center align-items-center ">
          
             <div className="current-date light-purple-text ">{formattedDateTime}</div>
         
@@ -240,11 +241,9 @@ useEffect(() => {
                 <img src='music-icon.svg' alt='music icon' style={{cursor: 'pointer'}} onClick={playSound}/>
                 <img src='mic-icon.svg' alt='mic icon' style={{cursor: 'pointer'}}/>
               </div>
-          
-
         </div>
 
-        <div className="col-5 h-75 right-border yellow-border  justify-content-center align-items-center d-flex purple">
+        <div className="col-5 h-75 right-border yellow-shadow-right  justify-content-center align-items-center d-flex purple">
             <div className="row align-items-center">
                 <div className="col-10">
                     <div className="round-div">
